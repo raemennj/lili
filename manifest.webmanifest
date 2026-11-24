@@ -1,0 +1,25 @@
+{
+  "id": "./",
+  "name": "lili \u2022 Dress-Up & Dream House",
+  "short_name": "lili",
+  "description": "Create looks, decorate rooms, and play in your own little world.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#fff9f0",
+  "theme_color": "#e735a0",
+  "icons": [
+    {
+      "src": "./icons/lili-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./icons/lili-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
