@@ -97,7 +97,7 @@ button:disabled{opacity:.48}
  #world>.roomBar{grid-column:1;grid-row:1;flex-wrap:wrap}#playfield{grid-column:1;grid-row:2;align-self:center;max-height:100%}
  .worldDock{grid-column:2;grid-row:1/3}
 }
-</style></head><body><header><strong>✧ Liliana Jewall</strong><div class="modes"><label class="packSelect">Theme pack <select id="packSelect"><option value="all">All items</option><option value="christmas">🎄 Christmas</option></select></label><button id="studioMode">Dress-Up Studio</button><button id="worldMode">My Little World</button></div><button id="download">↓ Offline game</button></header><main><div id="studio"><h1>Dress-Up <em>Studio</em></h1><section><div class="stage"><svg id="scene" aria-hidden="true" viewBox="0 0 480 400" preserveAspectRatio="none"></svg><svg id="doll" role="img" aria-label="Your customized chibi avatar" viewBox="0 0 200 290"></svg></div><div class="panel dock" role="region" aria-label="Wardrobe and lookbook" tabindex="0"><h2>My wardrobe</h2><nav aria-label="Wardrobe categories"></nav><div id="faceTabs" role="group" aria-label="Face layers"></div><div class="choices"></div><label id="colorLabel"></label><div class="swatches"></div><div class="actions"><button id="mix">⚄ Surprise me</button><button class="primary" hidden id="update">Update look</button><button id="save">♡ Save look</button><button hidden id="remove">Delete look</button></div><div id="status" role="status"></div><h2 style="margin-top:20px">My lookbook</h2><div id="saved"></div></div></section></div><div id="world" hidden><h1>My Little <em>World</em></h1><div class="roomBar"><h2 id="roomName"></h2><button id="houseButton">⌂ Whole house</button><label>Travel to <select id="places"></select></label></div><aside id="houseMap" hidden><div class="roomBar"><h2>Dream house</h2><button id="closeHouse">Close</button></div><p id="houseHint"></p><div id="houseGrid"></div></aside><div id="playfield" role="group" aria-label="Play room"><svg id="worldScene" aria-hidden="true" viewBox="0 0 480 400" preserveAspectRatio="none"></svg><div id="pieces"></div></div><aside class="worldDock dock" aria-label="Room controls and catalog" tabindex="0"><div class="worldSections" aria-label="World tools"><button data-world-tab="play">▶ Play</button><button data-world-tab="people">☺ People</button><button data-world-tab="build">▦ Build</button><button data-world-tab="style">✿ Style</button></div><div data-world-section="play"><p>Tap a character or item to play. Drag it to move it.</p><div class="actions"><button id="worldAction" class="primary" disabled>Play</button><button id="worldRemove" disabled>Put away</button><small id="worldStatus" role="status"></small></div><div id="roleplay" class="actions"></div><div class="layers" role="group" aria-label="Layer order"><strong>Layers</strong><button id="toBack">Send to back</button><button id="backward">Move backward</button><button id="forward">Move forward</button><button id="toFront">Bring to front</button></div></div><div data-world-section="style" hidden><div id="itemColors" class="styling"></div><h2>Wallpaper</h2><div id="wallpaperControls" class="styling"></div></div><div data-world-section="people" hidden><h2>Add a character</h2><div class="toybox" id="cast"></div></div><div data-world-section="build" hidden><h2>Furniture &amp; props</h2><div id="propGroups" role="group" aria-label="Find pieces by room"></div><div class="toybox" id="props"></div></div></aside></div></main><script>
+#friends{width:min(95vw,480px);max-height:90dvh;border:2px solid #624465;border-radius:20px;background:#fff9f4;color:#382740;padding:18px}#friends::backdrop{background:#35243c88}#friends h2{margin:0}#friends .friendHead{display:flex;align-items:center;justify-content:space-between}#friendBody{display:flex;flex-wrap:wrap;gap:10px;padding-top:12px}#friendBody p,#friendBody textarea{width:100%;margin:0}#friendBody>svg{width:100%;height:180px}.friendStage{position:relative;width:100%;aspect-ratio:1.65;overflow:hidden;border-radius:14px}.friendStage>svg,.friendStage>div{position:absolute;inset:0;width:100%;height:100%}.friendStage .piece,.friendStage .piece *{pointer-events:none!important}</style></head><body><header><strong>✧ Liliana Jewall</strong><div class="modes"><label class="packSelect">Theme pack <select id="packSelect"><option value="all">All items</option><option value="christmas">🎄 Christmas</option></select></label><button id="studioMode">Dress-Up Studio</button><button id="worldMode">My Little World</button></div><button id="download">↓ Offline game</button></header><main><div id="studio"><h1>Dress-Up <em>Studio</em></h1><section><div class="stage"><svg id="scene" aria-hidden="true" viewBox="0 0 480 400" preserveAspectRatio="none"></svg><svg id="doll" role="img" aria-label="Your customized chibi avatar" viewBox="0 0 200 290"></svg></div><div class="panel dock" role="region" aria-label="Wardrobe and lookbook" tabindex="0"><h2>My wardrobe</h2><nav aria-label="Wardrobe categories"></nav><div id="faceTabs" role="group" aria-label="Face layers"></div><div class="choices"></div><label id="colorLabel"></label><div class="swatches"></div><div class="actions"><button id="mix">⚄ Surprise me</button><button class="primary" hidden id="update">Update look</button><button id="shareLook">Send look</button><button id="save">♡ Save look</button><button hidden id="remove">Delete look</button></div><div id="status" role="status"></div><h2 style="margin-top:20px">My lookbook</h2><div id="saved"></div></div></section></div><div id="world" hidden><h1>My Little <em>World</em></h1><div class="roomBar"><h2 id="roomName"></h2><button id="shareRoom">Friends</button><button id="houseButton">⌂ Whole house</button><label>Travel to <select id="places"></select></label></div><aside id="houseMap" hidden><div class="roomBar"><h2>Dream house</h2><button id="closeHouse">Close</button></div><p id="houseHint"></p><div id="houseGrid"></div></aside><div id="playfield" role="group" aria-label="Play room"><svg id="worldScene" aria-hidden="true" viewBox="0 0 480 400" preserveAspectRatio="none"></svg><div id="pieces"></div></div><aside class="worldDock dock" aria-label="Room controls and catalog" tabindex="0"><div class="worldSections" aria-label="World tools"><button data-world-tab="play">▶ Play</button><button data-world-tab="people">☺ People</button><button data-world-tab="build">▦ Build</button><button data-world-tab="style">✿ Style</button></div><div data-world-section="play"><p>Tap a character or item to play. Drag it to move it.</p><div class="actions"><button id="worldAction" class="primary" disabled>Play</button><button id="worldRemove" disabled>Put away</button><small id="worldStatus" role="status"></small></div><div id="roleplay" class="actions"></div><div class="layers" role="group" aria-label="Layer order"><strong>Layers</strong><button id="toBack">Send to back</button><button id="backward">Move backward</button><button id="forward">Move forward</button><button id="toFront">Bring to front</button></div></div><div data-world-section="style" hidden><div id="itemColors" class="styling"></div><h2>Wallpaper</h2><div id="wallpaperControls" class="styling"></div></div><div data-world-section="people" hidden><h2>Add a character</h2><div class="toybox" id="cast"></div></div><div data-world-section="build" hidden><h2>Furniture &amp; props</h2><div id="propGroups" role="group" aria-label="Find pieces by room"></div><div class="toybox" id="props"></div></div></aside></div></main><dialog id="friends" aria-labelledby="friendTitle"><div class="friendHead"><h2 id="friendTitle">Friends</h2><button id="friendClose" aria-label="Close">✕</button></div><div id="friendBody"></div></dialog><script>
 const $=s=>document.querySelector(s), names={Hair:['Side sweep','Space buns','Pigtails','Long waves','Pixie','Curly bob'],Outfit:['Party dress','Overalls','Star tee','Tutu','Jumper','Sweater'],Extra:['No extra','Bow','Glasses','Crown','Heart clips','Headband'],Face:['Smile','Wink','Happy']};
 const colors={Hair:['#754735','#352d39','#d68a47','#e7bd75','#e7729c','#7e6ca6'],Outfit:['#be648c','#699e9c','#788cc3','#cb8358','#9c76aa','#dfae4d'],Extra:['#f5bb67','#ef85a5','#8acdc0','#b19ada','#78b0d7','#fee192'],Face:['#ffdbb6','#efbc99','#dca37d','#bd8262','#996349','#74483c']};
 names.Hair.push('Twin braids','High pony','Blunt bob','Cloud curls','Top knot','Mermaid waves','Side braid','Spiky crop');
@@ -658,7 +658,7 @@ $('#save').onclick=()=>{
  looks.push(structuredClone(state));selectedLook=looks.length-1;
  persist('Saved as Look '+(selectedLook+1)+'.');
 };
-$('#download').onclick=async()=>{let a=document.createElement('a');const clean=document.documentElement.cloneNode(true);for(const id of ['pieces','props','propGroups','places','cast','saved'])clean.querySelector('#'+id).replaceChildren();let u=URL.createObjectURL(new Blob(['\x3c!doctype html>'+clean.outerHTML],{type:'text/html'}));a.href=u;a.download='Liliana-Jewall-Dress-Up.html';a.click();setTimeout(()=>URL.revokeObjectURL(u),2000)};
+$('#download').onclick=async()=>{let a=document.createElement('a');const clean=document.documentElement.cloneNode(true);clean.querySelector('#friends').removeAttribute('open');clean.querySelector('#friendBody').replaceChildren();clean.querySelector('#shareRoom').textContent='Friends';clean.querySelectorAll('script[data-live-client]').forEach(el=>el.remove());for(const id of ['pieces','props','propGroups','places','cast','saved'])clean.querySelector('#'+id).replaceChildren();let u=URL.createObjectURL(new Blob(['\x3c!doctype html>'+clean.outerHTML],{type:'text/html'}));a.href=u;a.download='Liliana-Jewall-Dress-Up.html';a.click();setTimeout(()=>URL.revokeObjectURL(u),2000)};
 render();book();</script><script>const worldKey='lj-little-world-v1';
 const houseRooms={24:['Dream house living room','#f4d5da','#dcb797'],25:['Dream house bedroom','#e7daf1','#d9bfd2'],26:['Dream house kitchen','#d6e8dc','#ddc7a7'],27:['Dream house bathroom','#d4e7ef','#b8d6d8']};
 const places=[1,2,11,7,4,12,13,19,24,25,26,27,28,29];
@@ -813,6 +813,7 @@ if(world.layerVersion!==1){
 }
 const roomItems=()=>world.rooms[world.room];
 function keepWorld(){
+ sendRoom();
  try{localStorage.setItem(worldKey,JSON.stringify(world));$('#worldStatus').textContent='Room saved on this browser.'}
  catch{$('#worldStatus').textContent='Room saved for this session.'}
 }
@@ -921,8 +922,7 @@ function itemPicture(item){
   return 'stop-color="'+shadeColor(base,lightness>.55?[255,255,246]:[45,35,66],lightness>.55?(lightness-.55)*1.5:(.55-lightness)*1.1)+'"';
  });
 }
-function wallpaper(id,original){
- const style=world.decor?.[id];
+function wallpaper(id,original,style=world.decor?.[id]){
  if(!style||!houseRooms[id])return original;
  const color=roomPalette.includes(style.color)?style.color:roomPalette[0];
  let pattern='';
@@ -974,10 +974,13 @@ function controls(){
 }
 function position(el,item){el.style.left=item.x+'%';el.style.top=item.y+'%'}
 function drawRoom(){
- const tray=$('#pieces');tray.replaceChildren();
- roomItems().forEach((item,i)=>{
+ drawPieces($('#pieces'),roomItems(),chosen);controls();
+}
+function drawPieces(tray,items,selection){
+ tray.replaceChildren();
+ items.forEach((item,i)=>{
   const el=document.createElement('button');el.type='button';el.className='piece '+item.kind;
-  el.style.zIndex=String(i+1);el.dataset.index=i;el.setAttribute('aria-label',itemName(item)+' '+(i+1));el.setAttribute('aria-pressed',i===chosen);
+  el.style.zIndex=String(i+1);el.dataset.index=i;el.setAttribute('aria-label',itemName(item)+' '+(i+1));el.setAttribute('aria-pressed',i===selection);
   if(item.kind==='character'){
    el.innerHTML=characterPicture(item);
    if(lines[item.line]){const bubble=document.createElement('span');bubble.className='bubble';bubble.textContent=lines[item.line];el.append(bubble)}
@@ -988,7 +991,6 @@ function drawRoom(){
   }
   position(el,item);tray.append(el);
  });
- controls();
 }
 function choose(i){
  waiting=null;chosen=i;for(const el of $('#pieces').children)el.setAttribute('aria-pressed',Number(el.dataset.index)===chosen);
@@ -1073,7 +1075,7 @@ function setMode(play){
  $('#studioMode').setAttribute('aria-pressed',!play);$('#worldMode').setAttribute('aria-pressed',play);
  if(play){fillCast();enterRoom(world.room)}
 }
-$('#worldMode').onclick=()=>setMode(true);$('#studioMode').onclick=()=>setMode(false);
+$('#worldMode').onclick=()=>setMode(true);$('#studioMode').onclick=()=>{if(hosting)closeVisit();setMode(false)};
 for(const id of places){const option=document.createElement('option');option.value=id;option.textContent=roomTitle(id);$('#places').append(option)}
 $('#places').onchange=e=>enterRoom(Number(e.target.value));
 showCatalog();
@@ -1091,4 +1093,168 @@ function worldTools(name){
 }
 for(const button of document.querySelectorAll('[data-world-tab]'))button.onclick=()=>worldTools(button.dataset.worldTab);
 worldTools('play');
+const friendBox=$('#friends'), friendBody=$('#friendBody');
+const homeURL=location.protocol==='file:'?'https://raemennj.github.io/lili/':location.href.split('#')[0].split('?')[0];
+let peer=null,wire=null,hosting=false,invite='',friendDoll=null,visitorRoom=null,visitTimer,paintTimer,session=0,screen=0;
+function page(title){
+ screen++;$('#friendTitle').textContent=title;friendBody.replaceChildren();
+ if(!friendBox.open)friendBox.showModal();
+}
+function note(message){const p=document.createElement('p');p.textContent=message;friendBody.append(p);return p}
+function action(label,fn){return btn(friendBody,label,fn)}
+function closeVisit(){
+ session++;clearTimeout(visitTimer);clearTimeout(paintTimer);
+ const previous=peer;peer=null;wire=null;hosting=false;invite='';friendDoll=null;visitorRoom=null;
+ previous?.destroy();$('#shareRoom').textContent='Friends';
+}
+function endMessage(message){closeVisit();page('Live visit');note(message);action('Done',()=>friendBox.close())}
+function snapshot(){return {id:world.room,items:roomItems(),wall:world.decor?.[world.room]||null}}
+function sendRoom(){if(hosting&&wire?.open){clearTimeout(paintTimer);paintTimer=setTimeout(()=>{if(hosting&&wire?.open)wire.send({room:snapshot(),hasDoll:roomItems().includes(friendDoll)})},60)}}
+function safeLook(raw){
+ if(!raw||typeof raw!=='object'||!Number.isInteger(raw.Hair)||!raw.ink)throw Error();
+ const s=restore(raw);
+ for(const k of Object.keys(s.ink))if(!Number.isInteger(s.ink[k]))s.ink[k]=defaults.ink[k];
+ return s;
+}
+function bounded(n){if(!Number.isFinite(n))throw Error();return Math.max(0,Math.min(100,n))}
+function safeRoom(raw){
+ if(!places.includes(raw?.id)||!Array.isArray(raw.items)||raw.items.length>250)throw Error();
+ const token=s=>typeof s==='string'&&/^[a-zA-Z0-9.-]{1,90}$/.test(s);
+ function toy(p){
+  if(p?.kind!=='prop'||typeof p.type!=='string'||!Object.hasOwn(toys,p.type))throw Error();
+  const t={...prop(p.type,bounded(p.x),bounded(p.y)),active:p.active===true};
+  if(roomPalette.includes(p.tint))t.tint=p.tint;
+  if(token(p.uid))t.uid=p.uid;
+  return t;
+ }
+ const items=raw.items.map(p=>{
+  if(p?.kind!=='character')return toy(p);
+  const c=figure(safeLook(p.look),bounded(p.x));c.y=bounded(p.y);
+  if(Number.isInteger(p.line)&&lines[p.line])c.line=p.line;
+  if(['sit','sleep'].includes(p.pose))c.pose=p.pose;
+  if(token(p.support))c.support=p.support;
+  if(p.held&&handheld.has(p.held.type))c.held=toy(p.held);
+  return c;
+ });
+ const w=raw.wall;
+ const wall=w&&roomPalette.includes(w.color)&&['Solid','Dots','Stripes','Stars','Flowers'].includes(w.pattern)?{color:w.color,pattern:w.pattern}:null;
+ return {id:raw.id,items,wall};
+}
+function preview(r){
+ const stage=document.createElement('div');stage.className='friendStage';
+ stage.innerHTML='<svg viewBox="0 0 480 400" preserveAspectRatio="none">'+wallpaper(r.id,baseRoomBackdrop(r.id),r.wall)+'</svg>';
+ const tray=document.createElement('div');stage.append(tray);drawPieces(tray,r.items,null);friendBody.append(stage);return stage;
+}
+async function pack(data){
+ const raw=new TextEncoder().encode(JSON.stringify(data));if(raw.length>150000)throw Error();
+ let bytes=raw,tag='j';
+ if(window.CompressionStream){bytes=new Uint8Array(await new Response(new Blob([raw]).stream().pipeThrough(new CompressionStream('gzip'))).arrayBuffer());tag='z'}
+ return tag+btoa(Array.from(bytes,b=>String.fromCharCode(b)).join('')).replaceAll('+','-').replaceAll('/','_').replace(/=+$/,'');
+}
+async function unpack(code){
+ if(code.length>200001||!/^([jz])[a-zA-Z0-9_-]+$/.test(code))throw Error();
+ const bytes=Uint8Array.from(atob(code.slice(1).replaceAll('-','+').replaceAll('_','/')),c=>c.charCodeAt(0));
+ let stream=new Blob([bytes]).stream();if(code[0]==='z')stream=stream.pipeThrough(new DecompressionStream('gzip'));
+ const reader=stream.getReader(),decoder=new TextDecoder();let size=0,json='';
+ for(;;){const {value,done}=await reader.read();if(done)break;size+=value.length;if(size>150000){await reader.cancel();throw Error()}json+=decoder.decode(value,{stream:true})}
+ return JSON.parse(json+decoder.decode());
+}
+function sendLink(url,title){
+ if(navigator.share)action('Send with…',async()=>{try{await navigator.share({title,url})}catch(e){if(e.name!=='AbortError')manual()}});
+ function manual(){const field=document.createElement('textarea');field.readOnly=true;field.value=url;field.setAttribute('aria-label','Friend link');friendBody.append(field);field.select()}
+ action('Copy link',async()=>{try{await navigator.clipboard.writeText(url);note('Link copied.')}catch{manual()}});
+}
+async function shareCard(room){
+ page(room?'Send this room':'Send this look');const view=screen;
+ try{
+  const data=room?{room:safeRoom(snapshot())}:{look:state};
+  if(room)preview(data.room);else friendBody.insertAdjacentHTML('beforeend',mini(state,'whole'));
+  const code=await pack(data);if(view!==screen||!friendBox.open)return;
+  sendLink(homeURL+'#gift='+code,room?'My Lili room':'My Lili look');
+ }catch{note('This design is too large to send. Try a smaller room.')}
+}
+let libraryLoad;
+function loadPeer(){
+ if(window.Peer)return Promise.resolve();
+ if(!libraryLoad)libraryLoad=new Promise((resolve,reject)=>{
+  const script=document.createElement('script');script.src='https://cdn.jsdelivr.net/npm/peerjs@1.5.5/dist/peerjs.min.js';
+  script.dataset.liveClient='';script.crossOrigin='anonymous';script.integrity='sha384-x0YgkOr/3UOZP2CRDxGW9e0Q+2Qjyr3uJrm4xU32Y7ZCNAo7Cc7bjhrZMi/dwczu';
+  script.onload=resolve;script.onerror=()=>{script.remove();libraryLoad=null;reject(Error())};document.head.append(script);
+ });
+ return libraryLoad;
+}
+function visitMenu(){
+ page('Live room');if(!invite){note('Connecting…')}
+ else if(wire?.open){note('Your friend is visiting. Return to the room to play.')}
+ else{note('Send this invitation to one friend. Keep the game open while they join.');sendLink(invite,'Visit my Lili room')}
+ if(hosting)action('Back to room',()=>friendBox.close());
+ action('End visit',()=>{closeVisit();friendBox.close()});
+}
+async function startVisit(id){
+ closeVisit();const attempt=session;hosting=!id;page('Live room');note('Connecting…');
+ action('Cancel',()=>{closeVisit();friendBox.close()});
+ const fail=()=>{if(attempt===session)endMessage('Couldn’t connect. Open the game on both phones and try a new invitation.')};
+ visitTimer=setTimeout(fail,30000);
+ try{
+  await loadPeer();if(attempt!==session)return;
+  const current=peer=new Peer();
+  function bind(conn){
+   if(attempt!==session||wire){conn.close();return}wire=conn;
+   conn.on('open',()=>{
+    if(attempt!==session)return;clearTimeout(visitTimer);
+    if(hosting){$('#shareRoom').textContent='Friend visiting';if(friendBox.open)friendBox.close();sendRoom()}
+   });
+   conn.on('data',msg=>{
+    if(attempt!==session||!msg)return;
+    try{
+     if(hosting){
+      if(msg.look&&!roomItems().includes(friendDoll)&&roomItems().length<250){friendDoll=figure(safeLook(msg.look),63);addItem(friendDoll)}
+      else if(msg.move&&msg.id===world.room&&roomItems().includes(friendDoll)){
+       clearPose(friendDoll);moveItem(friendDoll,bounded(msg.move.x),bounded(msg.move.y));drawRoom();keepWorld();
+      }
+     }else if(msg.room){
+      visitorRoom=safeRoom(msg.room);page(roomTitle(visitorRoom.id));const stage=preview(visitorRoom);
+      if(!msg.hasDoll){action('Bring my doll',e=>{e.currentTarget.disabled=true;conn.send({look:state})})}
+      else{note('Tap the room to move your doll.');stage.onclick=e=>{const b=stage.getBoundingClientRect();conn.send({id:visitorRoom.id,move:{x:100*(e.clientX-b.left)/b.width,y:100*(e.clientY-b.top)/b.height}})}}
+      action('Leave visit',()=>{closeVisit();friendBox.close()});
+     }
+    }catch{fail()}
+   });
+   conn.on('error',fail);conn.on('close',()=>{if(attempt===session)endMessage('The live visit ended.')});
+  }
+  current.on('error',fail);current.on('connection',conn=>{if(hosting)bind(conn);else conn.close()});
+  current.on('open',pid=>{
+   if(attempt!==session)return;
+   if(id){bind(current.connect(id,{reliable:true,serialization:'json'}))}
+   else{clearTimeout(visitTimer);invite=homeURL+'#visit='+pid;$('#shareRoom').textContent='Live visit';visitMenu()}
+  });
+ }catch{fail()}
+}
+$('#shareLook').onclick=()=>shareCard(false);
+$('#shareRoom').onclick=()=>{
+ if(hosting){visitMenu();return}
+ page('Room friends');action('Send this room',()=>shareCard(true));
+ action('Start a live visit',()=>startVisit());
+};
+friendBox.addEventListener('close',()=>{if(!friendBox.open&&!hosting)closeVisit()});
+$('#friendClose').onclick=()=>{if(!hosting)closeVisit();friendBox.close()};
+async function receive(){
+ const hash=location.hash.slice(1);if(!/^(gift|visit)=/.test(hash))return;
+ closeVisit();history.replaceState(null,'',location.href.split('#')[0]);page('From a friend');const view=screen;
+ try{
+  if(hash.startsWith('visit=')){
+   const id=hash.slice(6);if(!/^[a-zA-Z0-9-]{1,80}$/.test(id))throw Error();
+   note('Visit your friend’s room and bring the doll you’re wearing.');action('Join live room',()=>startVisit(id));return;
+  }
+  const data=await unpack(hash.slice(5));if(view!==screen||!friendBox.open)return;
+  if(data.look){const look=safeLook(data.look);friendBody.insertAdjacentHTML('beforeend',mini(look,'whole'));
+   action('Add to my lookbook',()=>{looks.push(look);state=structuredClone(look);selectedLook=looks.length-1;render();setMode(false);persist('Friend’s look added.');friendBox.close()});
+  }else{const r=safeRoom(data.room);preview(r);
+   note('Use this design to replace your '+roomTitle(r.id)+' layout.');
+   action('Use this room',()=>{world.rooms[r.id]=r.items;world.decor??={};if(r.wall)world.decor[r.id]=r.wall;else delete world.decor[r.id];world.room=r.id;setMode(true);friendBox.close()});
+  }
+ }catch{note('This link could not be opened. Ask your friend to send a fresh one.')}
+}
+window.addEventListener('hashchange',receive);receive();
+
 </script><script>if ("serviceWorker" in navigator && location.protocol === "https:") { window.addEventListener("load", () => navigator.serviceWorker.register("./sw.js").catch(console.warn)); }</script></body></html>

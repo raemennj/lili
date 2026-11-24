@@ -1,4 +1,4 @@
-const CACHE = 'lili-v1';
+const CACHE = 'lili-v2';
 const SHELL = ['./', './index.html', './manifest.webmanifest', './icons/lili-180.png', './icons/lili-192.png', './icons/lili-512.png'];
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(SHELL)).then(() => self.skipWaiting()));
